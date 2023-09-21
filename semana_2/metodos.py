@@ -32,3 +32,7 @@ print(texto)
 texto = input("Ingresa un texto: ").center(20, "_")
 print(texto)
 
+# como imprimir un string que contenga comillas
+print("\"hola\"")
+print('"hola"')
+

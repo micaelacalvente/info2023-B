@@ -18,7 +18,7 @@ print(lista[-1])
 #modificar elementos de una lista
 lista[0] = "info"
 
-#agregar un elemento a la lista
+#agregar un elemento a la lista al final
 lista.append(6)
 
 #eliminar elemento de la lista

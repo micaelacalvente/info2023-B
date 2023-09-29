@@ -15,3 +15,11 @@ for i in cadena:
     if i == " ":
         contador +=1
 print("la cantidad de palabras es",contador)
+
+# solucion 3
+cadena = input("Ingresa una cadena de caracteres: ")
+for i in cadena:
+    if i == " ":
+        cadena -=1
+
+print("la cantidad de palabras es",len(cadena))

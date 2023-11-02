@@ -43,10 +43,21 @@ class Motocicleta(Bicicleta):
     def __str__(self):
         return f"{super().__str__()} con {self.velocidad} km/hr + {self.cilindrada} cc"
 
-def catalogar(lista):
+# FUNCION 1 / PRIMERA VERSION DE CATALOGAR / PUNTO 2
+'''def catalogar(lista):
     for vehiculo in lista:
         print(f"Clase: {vehiculo.__class__.__name__} ")
-        print(f"Atributos: {vehiculo}")
+        print(f"Atributos: {vehiculo}")'''
+
+# FUNCION 2 / SEGUNDA VERSION DE CATALOGAR / PUNTO 3
+def catalogar(lista, ruedas=None):
+    if ruedas != None:
+        vehiculos_filtro = [vehiculo for vehiculo in lista if vehiculo.ruedas == ruedas]
+        print(f"Se han encontrado {len(vehiculos_filtro)} vehículos con {ruedas} ruedas")
+    else:
+        for vehiculo in lista:
+            print(f"Clase: {vehiculo.__class__.__name__} ")
+            print(f"Atributos: {vehiculo}")
 
 
 # crear lista de vehiculos
@@ -54,7 +65,8 @@ vehiculos = [
     Coche("azul", 4, 220, 2000),
     Bicicleta("rojo", 2, "urbana"),
     Camioneta("blanco", 4, 250, 2500, 50),
-    Motocicleta("amarillo", 2, "urbana", 150, 1500)
+    Motocicleta("amarillo", 2, "urbana", 150, 1500),
+    Motocicleta("verde", 2, "urbana", 150, 1500)
 ]
 
-catalogar(vehiculos)
+catalogar(vehiculos, 0)

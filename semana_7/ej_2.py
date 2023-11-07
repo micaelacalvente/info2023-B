@@ -70,3 +70,5 @@ vehiculos = [
 ]
 
 catalogar(vehiculos, 0)
+
+print(Motocicleta.mro())

@@ -23,3 +23,5 @@ print(v)
 
 c = Coche("negro", 4, 150, 2000)
 print(c)
+
+print(Coche.mro())
